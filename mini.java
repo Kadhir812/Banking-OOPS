@@ -1,4 +1,3 @@
-import java.util.*;
 
 interface Employee {
     void calculateSalary();
@@ -63,6 +62,7 @@ class PermanentEmployee implements Employee {
 }
 
 
+import java.util.*;
 
 public class MainApp {
     public static void main(String[] args) {
