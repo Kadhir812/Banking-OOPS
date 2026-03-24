@@ -1,15 +1,19 @@
+package Banking;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+
 class Customer {
+
+    private static int nextAccountNumber = 1001;
     private int accountNumber;
     private String name;
     private double balance;
     private String accountType;
     private String email;
 
-    public Customer(int accountNumber, String name, double balance, String accountType, String email) {
-        this.accountNumber = accountNumber;
+    public Customer(String name, double balance, String accountType, String email) {
+        this.accountNumber = nextAccountNumber++;
         this.name = name;
         this.balance = balance;
         this.accountType = accountType;
@@ -20,10 +24,7 @@ class Customer {
         return accountNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
+   
     public String getName() {
         return name;
     }
@@ -64,9 +65,10 @@ class Bank {
         customers = new ArrayList<>();
     }
 
-    public void createAccount(int accountNumber, String name, double balance, String accountType, String email) {
-        customers.add(new Customer(accountNumber, name, balance, accountType, email));
-        System.out.println("Account created successfully.");
+    public void createAccount(String name, double balance, String accountType, String email) {
+        Customer c = new Customer(name, balance, accountType, email);
+        customers.add(c);
+        System.out.println("Account created successfully. Account Number: " + c.getAccountNumber());
     }
 
     public Customer searchCustomer(int accountNumber) {
@@ -150,6 +152,7 @@ public class oops {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Bank bank = new Bank();
+        int acc; 
         while (true) {
             System.out.println(
                     "\n1. Create Account\n2. Deposit\n3. Withdraw\n4. Enquiry\n5. Transfer\n6. Search by Account Number\n7. Display All\n8. Exit");
@@ -157,8 +160,6 @@ public class oops {
             int ch = sc.nextInt();
             switch (ch) {
                 case 1:
-                    System.out.print("Enter Account Number: ");
-                    int acc = sc.nextInt();
                     sc.nextLine();
                     System.out.print("Enter Name: ");
                     String name = sc.nextLine();
@@ -169,7 +170,7 @@ public class oops {
                     String type = sc.nextLine();
                     System.out.print("Enter Email: ");
                     String email = sc.nextLine();
-                    bank.createAccount(acc, name, bal, type, email);
+                    bank.createAccount(name, bal, type, email);
                     break;
                 case 2:
                     System.out.print("Enter Account Number: ");

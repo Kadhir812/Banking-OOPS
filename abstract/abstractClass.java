@@ -1,3 +1,4 @@
+import java.util.*;
 
 interface Employee {
     void calculateSalary();
@@ -62,9 +63,8 @@ class PermanentEmployee implements Employee {
 }
 
 
-import java.util.*;
 
-public class MainApp {
+public class abstractClass {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<Employee> list = new ArrayList<>();
