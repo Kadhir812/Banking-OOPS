@@ -60,14 +60,14 @@ public class stream {
                 // books.stream().forEach(i -> System.out.println(i.getAuthor()));
                 
                 // /'sort books by price'
-                // books.stream()
-                //      .sorted(Comparator.comparingDouble(Book::getPrice))
-                //      .forEach(i -> System.out.println(i.getTitle() + " - " + i.getPrice()));
+                books.stream()
+                     .sorted(Comparator.comparingDouble(Book::getPrice))
+                     .forEach(i -> System.out.println(i.getTitle() + " - " + i.getPrice()));
 
                 // sort books by title
-                // books.stream()
-                //      .sorted(Comparator.comparing(Book::getTitle).reversed())
-                //      .forEach(i -> System.out.println(i.getTitle()));
+                books.stream()
+                     .sorted(Comparator.comparing(Book::getTitle).reversed())
+                     .forEach(i -> System.out.println(i.getTitle()));
 
                 // Get all books belonging to "Programming" category
                 books.stream()
