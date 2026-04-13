@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="cart1" class="com.example.bean.Cart">
+              <property name="cartId" value="1001" />
+              <property name="ownerName" value="Ajay" />
+              <property name="totalAmount" value="2499.50" />
+       </bean>
+
+       <bean id="product1" class="com.example.bean.Product">
+              <property name="productId" value="501" />
+              <property name="productName" value="Laptop Stand" />
+              <property name="price" value="999.00" />
+              <property name="cartObj" ref="cart1" />
+       </bean>
+
+       <bean id="product2" class="com.example.bean.Product">
+              <property name="productId" value="502" />
+              <property name="productName" value="Wireless Mouse" />
+              <property name="price" value="1500.50" />
+              <property name="cartObj" ref="cart1" />
+       </bean>
+
+       
+</beans>
