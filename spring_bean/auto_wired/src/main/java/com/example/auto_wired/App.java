@@ -1,4 +1,4 @@
-package com.example.auto_wired;
+package spring.auto_wired.src.main.java.com.example.auto_wired;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

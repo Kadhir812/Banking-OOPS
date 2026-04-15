@@ -1,4 +1,4 @@
-package com.example.const_arg;
+package spring.const_arg.src.main.java.com.example.const_arg;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

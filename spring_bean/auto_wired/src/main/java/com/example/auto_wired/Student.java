@@ -1,4 +1,4 @@
-package com.example.auto_wired;
+package spring.auto_wired.src.main.java.com.example.auto_wired;
 
 import java.util.List;
 import java.util.ArrayList;
