@@ -1,5 +1,8 @@
 package com.example.auto_wired;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
 public class Employee {
     private int empId;
     private String name;
@@ -24,10 +27,12 @@ public class Employee {
         this.name = name;
     }
 
+    @PostConstruct
     public void start() {
         System.out.println("Employee bean is initialized");
     }
 
+    @PreDestroy
     public void stop() {
         System.out.println("Employee bean is destroyed");
     }
