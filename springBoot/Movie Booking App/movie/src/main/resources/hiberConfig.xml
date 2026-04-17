@@ -3,15 +3,12 @@
 "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 <session-factory>
-<property name = "hibernate.dialect">
-         org.hibernate.dialect.MySQLDialect
-</property>
 <property name = "hibernate.connection.driver_class">
          com.mysql.cj.jdbc.Driver
 </property>
 <!-- Assume test is the database name -->
 <property name = "hibernate.connection.url">
-         jdbc:mysql://localhost:3306/hiber
+         jdbc:mysql://localhost:3306/hql
 </property>
 <property name = "hibernate.hbm2ddl.auto">
       update
@@ -20,7 +17,7 @@
          root
 </property>
 <property name = "hibernate.connection.password">
-        
+        Immunoglobin@812
 </property>
 
 </session-factory>

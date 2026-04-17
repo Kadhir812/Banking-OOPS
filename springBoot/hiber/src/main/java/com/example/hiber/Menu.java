@@ -21,6 +21,7 @@ public class Menu {
             System.out.println("2. Update Product Price");
             System.out.println("3. Delete Product");
             System.out.println("4. Find Product");
+            System.out.println("5. Select Page");
           
             System.out.print("Enter your choice: ");
             
@@ -41,6 +42,9 @@ public class Menu {
                     findProductMenu();
                     break;
                 case 5:
+                    selectPageMenu();
+                    break;
+                case 6:
                     running = false;
                     System.out.println("Exiting...");
                     break;
@@ -89,6 +93,14 @@ public class Menu {
         scanner.nextLine();
 
         App.findProduct(session, id);
+    }
+
+    private void selectPageMenu() {
+        System.out.print("Enter page number: ");
+        int pageNo = scanner.nextInt();
+        scanner.nextLine();
+
+        App.selectPage(session, pageNo);
     }
    
 }

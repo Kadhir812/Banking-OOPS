@@ -3,9 +3,6 @@
 "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 <session-factory>
-<property name = "hibernate.dialect">
-         org.hibernate.dialect.MySQLDialect
-</property>
 <property name = "hibernate.connection.driver_class">
          com.mysql.cj.jdbc.Driver
 </property>
@@ -20,7 +17,7 @@
          root
 </property>
 <property name = "hibernate.connection.password">
-        
+        Immunoglobin@812
 </property>
 
 </session-factory>
